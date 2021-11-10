@@ -2,9 +2,9 @@
 -- play for the entire tournament
 
 select
-  match_mast.play_stage,
+  m.play_stage,
   count(*)
 from player_in_out
-left join match_mast using (match_no)
+left join match_mast m using (match_no)
 where in_out = 'I'
-group by 1
+group by m.play_stage

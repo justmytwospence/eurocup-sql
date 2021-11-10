@@ -7,5 +7,5 @@ select
 from referee_mast r
 left join match_mast m using (referee_id)
 left join soccer_venue using (venue_id)
-group by 1, 2
-order by 3 desc
+group by referee_name, venue_name
+order by num_matches desc

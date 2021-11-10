@@ -7,5 +7,5 @@ select
 from referee_mast r
 left join match_mast m using (referee_id)
 left join player_booked b using (match_no)
-group by 1
-order by 2 desc
+group by referee_name
+order by bookings desc

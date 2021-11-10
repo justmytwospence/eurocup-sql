@@ -6,5 +6,5 @@ select
   count(ass_ref_id) as num_referee
 from asst_referee_mast
 left join soccer_country using (country_id)
-group by 1
-order by 2 desc
+group by country_name
+order by num_referee desc
