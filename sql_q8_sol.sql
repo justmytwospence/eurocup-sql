@@ -4,8 +4,8 @@
 with penalty_shots as (
   select match_no, count(kick_id) as penalty_shootouts
   from penalty_shootout
-  group by 1
-  order by 2 desc
+  group by match_no
+  order by penalty_shootouts desc
   limit 1
 )
 
